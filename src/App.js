@@ -31,20 +31,34 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <input
+        type="file"
+        name="file"
+        accept=".csv"
+        onChange={handleFile}
+        style={{display: "block", margin: "10px auto"}}
+      ></input>
+
+      <br/>
+
+      <table style={{borderCollapse: "collapse", border: "1px solid black", margin: "5px auto"}}>
+        <thead>
+          <tr>
+            {columnArray.map((cols, i) => (
+              <th kay={i}>{cols}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {values.map((v, i) => (
+            <tr kay={i}>
+              {v.map((value, i) => (
+                <td kay={i}>{value}</td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
