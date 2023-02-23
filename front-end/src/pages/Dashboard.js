@@ -31,17 +31,20 @@ const Dashboard = () => {
 
   return(
     <div className="dashboard">
-      <input
-        type="file"
-        name="file"
-        accept=".csv"
-        onChange={handleFile}
-        style={{display: "block", margin: "10px auto"}}
-      ></input>
+      <label className="dashboard__form" for="file-upload">
+        Upload CSV file
+        <input
+          type="file"
+          name="file"
+          accept=".csv"
+          id="file-upload"
+          onChange={handleFile}
+        ></input>
+      </label>
 
       <br/>
 
-      <table style={{borderCollapse: "collapse", border: "1px solid black", margin: "5px auto"}}>
+      <table className="dashboard__table">
         <thead>
           <tr>
             {columnArray.map((cols, i) => (
