@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import Papa from 'papaparse';
+// import api from './api/axiosConfig';
 
 import "./dashboard.scss";
 
@@ -8,6 +9,15 @@ const Dashboard = () => {
   const [data, setData] = useState([]);
   const [columnArray, setColumn] = useState([]);
   const [values, setValues] = useState([]);
+
+  // const getDataFromDatabase = async () => {
+  //   try {
+  //   const response = await api.get("/api/employees")
+  //   setData(response.data);
+  //   } catch(err) {
+  //     console.log(err);
+  //   }
+  // }
 
   const handleFile = (e) => {
     Papa.parse(e.target.files[0], {
