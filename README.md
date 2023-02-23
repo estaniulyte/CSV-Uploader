@@ -1,6 +1,6 @@
 # CSV-Uploader
 
-Only front-end part is working.
+Front-end part:
 
 It can be lauched by navigating to front-end directory
 
