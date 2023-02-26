@@ -53,7 +53,7 @@ const Dashboard = () => {
       </label>
 
       <br/>
-
+      {columnArray ? 
       <table className="dashboard__table">
         <thead>
           <tr>
@@ -71,7 +71,7 @@ const Dashboard = () => {
             </tr>
           ))}
         </tbody>
-      </table>
+      </table> : " "}
     </div>
   );
 };
