@@ -47,6 +47,8 @@ const Dashboard = () => {
         })
       }
     })
+
+    getEmployees();
   }
 
   return(
