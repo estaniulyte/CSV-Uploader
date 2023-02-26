@@ -36,13 +36,15 @@ const Dashboard = () => {
         const valuesArray = [];
 
         result.data.map((d) => {
-          columnArray.push(Object.keys(d));
-          valuesArray.push(Object.values(d));
+          api.post('/employees', {
+            name: d.Name,
+            email: d.Email,
+            phone: d.Phone
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
         })
-
-        setData(result.data);
-        setColumn(columnArray[0]);
-        setValues(valuesArray);
       }
     })
   }
