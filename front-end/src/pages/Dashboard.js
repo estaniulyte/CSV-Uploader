@@ -7,7 +7,6 @@ import "./dashboard.scss";
 
 const Dashboard = () => {
 
-  const [data, setData] = useState([]);
   const [columnArray, setColumn] = useState([]);
   const [values, setValues] = useState([]);
 
