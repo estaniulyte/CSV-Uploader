@@ -28,6 +28,7 @@ const Dashboard = () => {
   }
 
   const handleFileUpload = async (e) => {
+    setColumn(['Name', 'Email', 'Phone Number']);
     Papa.parse(e.target.files[0], {
       header: true,
       skipEmptyLines: true,
