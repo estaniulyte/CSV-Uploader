@@ -41,7 +41,7 @@ const Dashboard = () => {
 
   return(
     <div className="dashboard">
-      <label className="dashboard__form" for="file-upload">
+      <label className="dashboard__form">
         Upload CSV file
         <input
           type="file"
