@@ -19,7 +19,7 @@ const Dashboard = () => {
   //   }
   // }
 
-  const handleFile = (e) => {
+  const handleFileUpload = async (e) => {
     Papa.parse(e.target.files[0], {
       header: true,
       skipEmptyLines: true,
@@ -48,7 +48,7 @@ const Dashboard = () => {
           name="file"
           accept=".csv"
           id="file-upload"
-          onChange={handleFile}
+          onChange={handleFileUpload}
         ></input>
       </label>
 
