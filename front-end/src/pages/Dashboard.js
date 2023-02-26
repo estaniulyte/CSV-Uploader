@@ -58,13 +58,13 @@ const Dashboard = () => {
         <thead>
           <tr>
             {columnArray.map((cols, i) => (
-              <th kay={i}>{cols}</th>
+              <th key={i}>{cols}</th>
             ))}
           </tr>
         </thead>
         <tbody>
           {values.map((v, i) => (
-            <tr kay={i}>
+            <tr key={i}>
               {v.map((value, i) => (
                 <td kay={i}>{value}</td>
               ))}
